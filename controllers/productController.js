@@ -196,7 +196,9 @@ export const updateProductController = async (req, res) => {
   try {
     const { name, description, price, category, quantity, shipping } = req.fields;
     const { photo } = req.files;
-
+console.log("params:", req.params);
+    console.log("fields:", req.fields);
+    console.log("files:", req.files);
     // Validation
     switch (true) {
       case !name:
